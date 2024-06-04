@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+#header {
+  background-color: #1f2937;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1em 0;
+}
+#header div {
+  margin: 0 10em;
+}
+#logo p {
+  font-size: 24px;
+  color: #f9faf8;
+}
+.header-links {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+}
+.header-links p {
+  font-size: 18px;
+  color: #e5e7eb;
+}
+
+#main div {
+  display: flex;
+}
+#c1 {
+  background-color: #1f2937;
+  justify-content: center;
+  align-items: center;
+  gap: 4em;
+  padding: 3em 0;
+}
+#c1 #text {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+}
+#c1 #main-text {
+  font-size: 48px;
+  font-weight: bold;
+  color: #f9f9f9;
+}
+#c1 #secondary-text {
+  font-size: 18px;
+  color: #e5e7eb;
+}
+#c1 img {
+  height: 200px;
+  width: 400px;
+}
+#c1 button {
+  background-color: #3882f6;
+  color: white;
+  height: 2em;
+  width: 10em;
+  margin-top: 1em;
+  border: solid 1px #3882f6;
+  border-radius: 10%;
+}
+#c2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+#c2 h2 {
+  font-size: 36px;
+  color: #1f2937;
+}
+#items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  margin-top: 2em;
+}
+.item {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-width: 150px;
+  text-align: center;
+  gap: 1em;
+}
+.item .box {
+  border: solid 2px #3882f6;
+  width: 150px;
+  height: 150px;
+  border-radius: 15%;
+  margin-top: 2em;
+}
+.subtext {
+  font-size: 18px;
+}
+#c3 {
+  background-color: #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10em;
+}
+#quote {
+  font-size: 36px;
+  font-weight: lighter;
+  color: #1f2937;
+  font-style: italic;
+}
+#author {
+  align-self: flex-end;
+  font-weight: bolder;
+}
+#c4 {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 10em;
+  background-color: #3882f6;
+  padding: 3em;
+}
+#c4-text {
+  display: flex;
+  flex-direction: column;
+  color: #e5e7eb;
+}
+#c4-btn {
+  background-color: #3882f6;
+  color: #e5e7eb;
+  border: solid 2px #e5e7eb;
+  border-radius: 8%;
+  padding: 0.3em 2.5em;
+}
+#footer {
+  background-color: black;
+  color: #e5e7eb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+}
