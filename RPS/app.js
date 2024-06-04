@@ -8,6 +8,7 @@ let computerScore = 0;
 let visualRoundCounter = document.querySelector("#round");
 let visualComputerScore = document.querySelector("#computer-score");
 let visualHumanScore = document.querySelector("#human-score");
+let winner = document.querySelector("#winner");
 btns.forEach((btn) =>
   btn.addEventListener("click", () => {
     playRound(String(btn.id), getComputerChoice());
@@ -48,9 +49,21 @@ function playRound(humanChoice, computerChoice) {
     console.log("Draw");
   }
   updateScore(roundCounter);
+  if (roundCounter == 5) checkWinner();
 }
 function updateScore(round) {
   visualHumanScore.textContent = "Human score: " + humanScore;
   visualComputerScore.textContent = "Computer score: " + computerScore;
   visualRoundCounter.textContent = "Round: " + round;
+}
+function checkWinner() {
+  if (humanScore > computerScore) winner.textContent = "You win!";
+  else if (computerScore > humanScore) winner.textContent = "You lose!";
+  else winner.textContent = "Draw!";
+}
+function resetVars() {
+  humanScore = 0;
+  computerScore = 0;
+  roundCounter = 0;
+  updateScore();
 }
