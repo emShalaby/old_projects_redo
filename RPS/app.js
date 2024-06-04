@@ -11,7 +11,11 @@ let visualHumanScore = document.querySelector("#human-score");
 let winner = document.querySelector("#winner");
 btns.forEach((btn) =>
   btn.addEventListener("click", () => {
-    playRound(String(btn.id), getComputerChoice());
+    if (roundCounter < 5) playRound(String(btn.id), getComputerChoice());
+    else {
+      resetVars();
+      playRound(String(btn.id), getComputerChoice());
+    }
   })
 );
 
@@ -65,5 +69,6 @@ function resetVars() {
   humanScore = 0;
   computerScore = 0;
   roundCounter = 0;
+  winner.textContent = "";
   updateScore();
 }
