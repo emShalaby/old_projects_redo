@@ -1,9 +1,13 @@
 const rockBtn = document.querySelector("#rock");
 const paperBtn = document.querySelector("#paper");
 const scissorsBtn = document.querySelector("#scissors");
-rockBtn.addEventListener("click", () => {
-  playGame("rock", getComputerChoice());
-});
+const btns = [rockBtn, paperBtn, scissorsBtn];
+btns.forEach((btn) =>
+  btn.addEventListener("click", () => {
+    playGame(String(btn.id), getComputerChoice());
+  })
+);
+
 function getHumanChoice() {
   return prompt("Enter your choice").toLowerCase();
 }
