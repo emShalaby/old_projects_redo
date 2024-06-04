@@ -1,3 +1,9 @@
+const rockBtn = document.querySelector("#rock");
+const paperBtn = document.querySelector("#paper");
+const scissorsBtn = document.querySelector("#scissors");
+rockBtn.addEventListener("click", () => {
+  playGame("rock", getComputerChoice());
+});
 function getHumanChoice() {
   return prompt("Enter your choice").toLowerCase();
 }
@@ -7,29 +13,31 @@ function getComputerChoice() {
   return choice[rng];
 }
 
-function playGame() {
+function playGame(humanChoice = "", computerChoice = "") {
   let humanScore = 0;
   let computerScore = 0;
-  function playRound(
-    humanChoice = getHumanChoice(),
-    computerChoice = getComputerChoice()
-  ) {
+  let visualComputerScore = document.querySelector("#computer-score");
+  let visualHumanScore = document.querySelector("#human-score");
+  function playRound() {
     if (humanChoice == "rock" && computerChoice == "rock") {
       console.log("Draw");
     }
     if (humanChoice == "rock" && computerChoice == "scissors") {
       console.log("You win! computer chose scissors");
       humanScore++;
+      visualHumanScore.textContent = "Human score: " + humanScore;
       return;
     }
     if (humanChoice == "rock" && computerChoice == "paper") {
       console.log("You lose! computer chose paper");
       computerScore++;
+      visualComputerScore.textContent = "Computer score: " + computerScore;
       return;
     }
     if (humanChoice == "scissors" && computerChoice == "rock") {
       console.log("You lose! computer chose rock");
       computerScore++;
+      visualComputerScore.textContent = "Computer score: " + computerScore;
       return;
     }
     if (humanChoice == "scissors" && computerChoice == "scissors") {
@@ -39,16 +47,19 @@ function playGame() {
     if (humanChoice == "scissors" && computerChoice == "paper") {
       console.log("You win! computer chose paper");
       humanScore++;
+      visualHumanScore.textContent = "Human score: " + humanScore;
       return;
     }
     if (humanChoice == "paper" && computerChoice == "rock") {
       console.log("You win! computer chose rock");
       humanScore++;
+      visualHumanScore.textContent = "Human score: " + humanScore;
       return;
     }
     if (humanChoice == "paper" && computerChoice == "scissors") {
       console.log("You lose! computer chose scissors");
       computerScore++;
+      visualComputerScore = "Computer score: " + computerScore;
       return;
     }
     if (humanChoice == "paper" && computerChoice == "paper") {
@@ -56,4 +67,5 @@ function playGame() {
       return;
     }
   }
+  playRound();
 }
