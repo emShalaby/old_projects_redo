@@ -56,13 +56,4 @@ function playGame() {
       return;
     }
   }
-  let i = 0;
-  while (i < 5) {
-    playRound();
-    i++;
-  }
-  console.log(
-    "computer score: " + computerScore + " human score: " + humanScore
-  );
 }
-playGame();
