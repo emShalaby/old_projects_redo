@@ -11,7 +11,8 @@ let visualHumanScore = document.querySelector("#human-score");
 let winner = document.querySelector("#winner");
 btns.forEach((btn) =>
   btn.addEventListener("click", () => {
-    if (roundCounter < 5) playRound(String(btn.id), getComputerChoice());
+    if (humanScore != 5 && computerScore != 5)
+      playRound(String(btn.id), getComputerChoice());
     else {
       resetVars();
       playRound(String(btn.id), getComputerChoice());
@@ -26,7 +27,7 @@ function getComputerChoice() {
 }
 
 function playRound(humanChoice, computerChoice) {
-  if (roundCounter < 5) roundCounter++;
+  roundCounter++;
   if (humanChoice == "rock" && computerChoice == "rock") {
     console.log("Draw");
   } else if (humanChoice == "rock" && computerChoice == "scissors") {
@@ -53,7 +54,7 @@ function playRound(humanChoice, computerChoice) {
     console.log("Draw");
   }
   updateScore(roundCounter);
-  if (roundCounter == 5) checkWinner();
+  if (humanScore == 5 || computerScore == 5) checkWinner();
 }
 function updateScore(round) {
   visualHumanScore.textContent = "Human score: " + humanScore;
