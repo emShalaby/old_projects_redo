@@ -23,6 +23,11 @@ html {
   justify-content: center;
   align-items: center;
   pad: 1em;
+  flex-direction: column;
+}
+#size{
+    width: 8em;
+    height: 3em;
 }
 #container {
   display: flex;
