@@ -5,14 +5,14 @@ const sizeBtn = document.querySelector("#size");
 let square = "";
 let row = "";
 
-function createGrid() {
+function createGrid(x=16,y=16) {
   document.querySelector("#container")?.remove();
   let container = document.createElement("div");
   container.id = "container";
-  for (let i = 0; i < 16; i++) {
+  for (let i = 0; i < y; i++) {
     row = document.createElement("div");
     row.className = "row";
-    for (let j = 0; j < 16; j++) {
+    for (let j = 0; j < x; j++) {
       square = document.createElement("div");
       square.className = "square";
       square.addEventListener("mouseover", (x) => {
