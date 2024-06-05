@@ -17,7 +17,6 @@ function createGrid() {
       square.className = "square";
       square.addEventListener("mouseover", (x) => {
         x.currentTarget.style.backgroundColor = "black";
-        console.log("hi");
       });
       row.append(square);
     }
