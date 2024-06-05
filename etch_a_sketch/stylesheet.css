@@ -39,4 +39,5 @@ html {
 .square {
   background-color: white;
   flex: auto;
+  border: solid 1px gray;
 }
