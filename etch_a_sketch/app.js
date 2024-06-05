@@ -5,7 +5,7 @@ const sizeBtn = document.querySelector("#size");
 let square = "";
 let row = "";
 
-function createGrid(x=16,y=16) {
+function createGrid(x = 16, y = 16) {
   document.querySelector("#container")?.remove();
   let container = document.createElement("div");
   container.id = "container";
@@ -25,3 +25,10 @@ function createGrid(x=16,y=16) {
   main.append(container);
 }
 createGrid();
+
+sizeBtn.addEventListener("click", () =>
+  createGrid(
+    Math.min(100, Math.abs(Number(prompt("Width: ")))),
+    Math.min(100, Math.abs(Number(prompt("Height: "))))
+  )
+);
