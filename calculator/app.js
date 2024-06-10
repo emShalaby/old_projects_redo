@@ -44,6 +44,14 @@ function clearScreen() {
   screen.textContent = "";
   screenArr = [];
 }
+function evalulation() {
+  screenArr.length == 1
+    ? typeof screenArr[0] == "number"
+      ? (screen.textContent = screenArr[0])
+      : clearScreen()
+    : false;
+}
+
 clearBtn.addEventListener("click", () => (screen.textContent = ""));
 btnList.forEach((btn) =>
   btn.addEventListener("click", () => updateScreen(btn.textContent))
