@@ -1,8 +1,9 @@
 const btnList = document.querySelectorAll(".visible");
 const screen = document.querySelector("#screen");
-btnList.forEach((btn) =>
-  btn.addEventListener("click", () => (screen.textContent += btn.id))
-);
+const clearBtn = document.querySelector("#clear");
+const equalBtn = document.querySelector("#equal");
+let screenArr = []; //array of everything being typed on screen
+
 function add() {
   return [...arguments].reduce((total, currentItem) => total + currentItem);
 }
@@ -35,3 +36,15 @@ function operate(arr) {
       [divide(Number(arr[0]), Number(arr[2]))].concat(arr.slice(3))
     );
 }
+function updateScreen(str) {
+  screen.textContent += str;
+  screenArr.push(str);
+}
+function clearScreen() {
+  screen.textContent = "";
+  screenArr = [];
+}
+clearBtn.addEventListener("click", () => (screen.textContent = ""));
+btnList.forEach((btn) =>
+  btn.addEventListener("click", () => updateScreen(btn.textContent))
+);
