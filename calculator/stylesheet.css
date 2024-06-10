@@ -3,24 +3,46 @@
     padding: 0;
     box-sizing: border-box;
 }
+html{
+    height: 100%;
+    width: 100%;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
 #calculator{
     display: flex;
     flex-wrap: wrap;
-    width: 200px;
-    height: 300px;
+    width: 280px;
+    height: 515px;
     flex-direction: column;
+    background-color: #383838;
 }
 #screen{
     flex: 1;
+    background-color: #404040;
 }
 #buttons{
     flex: 1;
     flex: 1;
     display: flex;
     flex-wrap: wrap;
-    height: max-content;
+    height: fit-content;
+    gap: .5em;
+    padding: 1em;
 }
-button{
-    height: max-content;
-    width: 30px;
+#buttons>button{
+    height: 2.5em;
+    width: 50px;
+    background-color: #454545;
+    color: white;
+    font-size: large;
+    border: none;
+}
+#buttons>#clear{
+    width: 100%;
 }
