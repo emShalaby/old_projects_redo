@@ -1,3 +1,8 @@
+const btnList = document.querySelectorAll("#buttons>button");
+const screen = document.querySelector("#screen");
+btnList.forEach((btn) =>
+  btn.addEventListener("click", () => (screen.textContent += btn.id))
+);
 function add() {
   return [...arguments].reduce((total, currentItem) => total + currentItem);
 }
@@ -25,7 +30,6 @@ function operate(arr) {
     return operate(
       [multiply(Number(arr[0]), Number(arr[2]))].concat(arr.slice(3))
     );
-
   else if (arr[1] == "/")
     return operate(
       [divide(Number(arr[0]), Number(arr[2]))].concat(arr.slice(3))
