@@ -46,13 +46,14 @@ function clearScreen() {
 }
 function evalulation() {
   screenArr.length == 1
-    ? typeof screenArr[0] == "number"
+    ? String(Number(screenArr[0])) != "NaN" //lol
       ? (screen.textContent = screenArr[0])
       : clearScreen()
     : false;
 }
 
 clearBtn.addEventListener("click", () => (screen.textContent = ""));
+equalBtn.addEventListener("click", evalulation);
 btnList.forEach((btn) =>
   btn.addEventListener("click", () => updateScreen(btn.textContent))
 );
