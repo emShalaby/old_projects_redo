@@ -1,4 +1,4 @@
-const btnList = document.querySelectorAll("#buttons>button");
+const btnList = document.querySelectorAll(".visible");
 const screen = document.querySelector("#screen");
 btnList.forEach((btn) =>
   btn.addEventListener("click", () => (screen.textContent += btn.id))
