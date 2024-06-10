@@ -50,6 +50,7 @@ function evalulation() {
       ? (screen.textContent = screenArr[0])
       : clearScreen()
     : false;
+    
 }
 
 clearBtn.addEventListener("click", () => (screen.textContent = ""));

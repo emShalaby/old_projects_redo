@@ -32,21 +32,35 @@ body {
 }
 #buttons {
   flex: 1;
-  flex: 1;
   display: flex;
   flex-wrap: wrap;
   height: fit-content;
   gap: 0.5em;
-  padding: 1em;
+  padding: .5em;
+  justify-content: center;
 }
 #buttons > button {
   height: 2.5em;
-  width: 50px;
+  width: 58px;
   background-color: #454545;
   color: white;
   font-size: large;
   border: none;
 }
-#buttons > #clear {
+#row1 {
+  display: flex;
   width: 100%;
+  gap: .5em;
+  justify-content: center;
+  align-items: center;
+  padding: .5em;
+}
+#row1 > button {
+  background-color: #454545;
+  color: white;
+  font-size: large;
+  border: none;
+  flex: 1;
+  height: 2.5em;
+
 }
