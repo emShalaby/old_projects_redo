@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#calculator{
+    display: flex;
+    flex-wrap: wrap;
+    width: 200px;
+    height: 300px;
+    flex-direction: column;
+}
+#screen{
+    flex: 1;
+}
+#buttons{
+    flex: 1;
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    height: max-content;
+}
+button{
+    height: max-content;
+    width: 30px;
+}
