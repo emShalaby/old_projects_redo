@@ -51,11 +51,11 @@ function clearScreen() {
   screenArr = [""];
 }
 function evalulation() {
-  screenArr.length == 1
-    ? String(Number(screenArr[0])) != "NaN" //lol
-      ? (screen.textContent = screenArr[0])
-      : clearScreen()
-    : false;
+  if (operate(screenArr)) {
+    screen.textContent = "";
+    updateScreen(operate(screenArr));
+    screenArr = [screen.textContent];
+  }
 }
 
 clearBtn.addEventListener("click", clearScreen);
