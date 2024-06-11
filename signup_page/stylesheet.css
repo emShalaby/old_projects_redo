@@ -18,18 +18,26 @@ html,
   flex: 1 1;
   display: flex;
 }
-#background-image{
-    height: 100%;
-    width: 100%;
+#background-image {
+  height: 100%;
+  width: 100%;
 }
 #c2 {
   flex: 2;
   background-color: #f9fafb;
-  padding: 7em  2em 2em 2em;
-  background-color: #F9FAFB;
+  background-color: #f9fafb;
   height: 100%;
+  flex-direction: column;
 }
 
 #header {
   color: black;
+  padding: 7em 3em 3em 3em;
+}
+#form-container{
+    display: flex;
+    flex-direction: column;
+    padding-top: 1em;
+    padding-left: 3em;
+    background-color: #FFFFFF;
 }
