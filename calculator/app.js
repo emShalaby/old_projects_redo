@@ -1,8 +1,10 @@
+//i skipped the error handling steps as the best way i can do that rn is thorugh if statements so its just whatever
 const btnList = document.querySelectorAll(".visible");
 const screen = document.querySelector("#screen");
 const clearBtn = document.querySelector("#clear");
 const equalBtn = document.querySelector("#equal");
 const operators = ["+", "x", "/", "-"];
+const backSpaceBtn = document.querySelector("#del");
 let screenArr = [""]; //array of everything being typed on screen
 
 function add() {
@@ -57,9 +59,22 @@ function evalulation() {
     screenArr = [screen.textContent];
   }
 }
+function Delete() {
+  screen.textContent
+    ? (screen.textContent = screen.textContent.slice(0, "-1"))
+    : true;
+  screenArr[screenArr.length - 1].length > 1
+    ? (screenArr[screenArr.length - 1] = screenArr[screenArr.length - 1].slice(
+        0,
+        -1
+      ))
+    : screenArr.pop();
+  if (screenArr.length == 0) screenArr.push("");
+}
 
 clearBtn.addEventListener("click", clearScreen);
 equalBtn.addEventListener("click", evalulation);
 btnList.forEach((btn) =>
   btn.addEventListener("click", () => updateScreen(btn.textContent))
 );
+backSpaceBtn.addEventListener("click", Delete);
