@@ -1,4 +1,5 @@
 //i skipped the error handling steps as the best way i can do that rn is thorugh if statements so its just whatever
+// also skipped dealing with long decimals
 const btnList = document.querySelectorAll(".visible");
 const screen = document.querySelector("#screen");
 const clearBtn = document.querySelector("#clear");
