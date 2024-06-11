@@ -48,7 +48,7 @@ function updateScreen(str) {
 }
 function clearScreen() {
   screen.textContent = "";
-  screenArr = [];
+  screenArr = [""];
 }
 function evalulation() {
   screenArr.length == 1
@@ -58,7 +58,7 @@ function evalulation() {
     : false;
 }
 
-clearBtn.addEventListener("click", () => (screen.textContent = ""));
+clearBtn.addEventListener("click", clearScreen);
 equalBtn.addEventListener("click", evalulation);
 btnList.forEach((btn) =>
   btn.addEventListener("click", () => updateScreen(btn.textContent))
