@@ -34,28 +34,38 @@ html,
   color: black;
   padding: 5em 3em 3em 3em;
 }
-#form-container{
-    display: flex;
-    flex-direction: column;
-    padding-top: 1em;
-    padding-left: 3em;
-    padding-right: 5em;
-    padding-bottom: 2em;
-    background-color: #FFFFFF;
+#form-container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1em;
+  padding-left: 3em;
+  padding-right: 5em;
+  padding-bottom: 2em;
+  background-color: #ffffff;
 }
-#form-container>h3{
-    margin-bottom: 1em;
+#form-container > h3 {
+  margin-bottom: 1em;
 }
-.fieldset{
-    border: none;
-    display: flex;
-    align-items: center;
-    gap: 3em;
+.fieldset {
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 3em;
 }
-label,input{
-    display: block;
-    margin-top: .5em;
+label,
+input {
+  display: block;
+  margin-top: 0.5em;
 }
-label{
-    font-size: 12px;
+label {
+  font-size: 12px;
+}
+button {
+  margin-left: 4em;
+  margin-top: 1em;
+  background-color: #596d48;
+  color: #FAFAF9;
+  width: 15em;
+  height: 3em;
+  font-weight: bold;
 }
