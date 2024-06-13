@@ -17,7 +17,7 @@ html {
   flex: 1;
   display: flex;
   flex-direction: column;
-  padding: 1em;
+  padding: .5em 1em;
 }
 #navbar>div{
   display: flex;
@@ -28,9 +28,14 @@ html {
 #navbar > div > img:not(#title_icon) {
   width: 1.5em;
 }
-
+#navbar>#title{
+  margin-bottom: 2em;
+}
 #title_icon {
   width: 2em;
+}
+#navbar>#settings{
+  margin-top: 3em;
 }
 #dashboard {
   flex: 2;
