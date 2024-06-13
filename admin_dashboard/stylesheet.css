@@ -8,16 +8,30 @@ html {
   width: 100%;
   height: 100%;
 }
-#main{
-    display: flex;
-    height: 100%;
-    width: 100%;
+#main {
+  display: flex;
+  height: 100%;
+  width: 100%;
 }
-#navbar{
-    flex: 1;
-    display: flex;
-    flex-direction: column;
+#navbar {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
 }
-#dashboard{
-    flex: 2;
+#navbar>div{
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  margin-top: 1em;
+}
+#navbar > div > img:not(#title_icon) {
+  width: 1.5em;
+}
+
+#title_icon {
+  width: 2em;
+}
+#dashboard {
+  flex: 2;
 }
