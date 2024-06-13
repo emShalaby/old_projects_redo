@@ -17,26 +17,29 @@ html {
   flex: 1;
   display: flex;
   flex-direction: column;
-  padding: .5em 1em;
+  padding: 0.5em 1em;
+  background-color: #1992d4;
 }
-#navbar>div{
+#navbar > div {
   display: flex;
   align-items: center;
   gap: 1em;
   margin-top: 1em;
+  color: #ffff;
 }
 #navbar > div > img:not(#title_icon) {
   width: 1.5em;
+  color: #ffff;
 }
-#navbar>#title{
+#navbar > #title {
   margin-bottom: 2em;
 }
 #title_icon {
   width: 2em;
 }
-#navbar>#settings{
+#navbar > #settings {
   margin-top: 3em;
 }
 #dashboard {
-  flex: 2;
+  flex: 5;
 }
