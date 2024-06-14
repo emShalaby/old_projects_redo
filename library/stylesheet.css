@@ -12,3 +12,9 @@ html {
     display: flex;
     flex-direction: column;
 }
+.off{
+    display: none;
+}
+label,input{
+  display: block;
+}

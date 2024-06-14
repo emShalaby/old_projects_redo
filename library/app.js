@@ -1,6 +1,8 @@
 const myLibrary = ["book1", "book2", "book3"];
 const libraryElement = document.querySelector("#library");
-const newBook = document.querySelector("#newbook");
+const newBookBtn = document.querySelector("#newbook");
+const modal = document.querySelector("#book_modal");
+const submitBtn = document.querySelector("#submit");
 
 function Book() {}
 function addBookToLibrary(book) {
@@ -24,3 +26,10 @@ function bookToElement(book) {
 }
 
 displayLibraryBooks();
+newBookBtn.addEventListener("click", () => {
+  modal.className = "on";
+});
+submitBtn.addEventListener("click", (event) => {
+  modal.className = "off";
+  event.preventDefault();
+});
