@@ -53,11 +53,39 @@ html {
   display: flex;
   flex-direction: column;
 }
-#top_bar{
+#top_bar {
   display: flex;
+  align-items: center;
+  gap: 1em;
+  padding: 1em;
+  justify-content: space-between;
 }
-#top_bar>img{
-  width: 1em;
+#top_bar_info {
+  display: flex;
+  gap: 1.5em;
+  align-items: center;
+}
+#search {
+  display: flex;
+  gap: 1em;
+}
+#search_bar {
+  width: 45em;
+  background-color: #e2e8f0;
+  border-radius: 10px;
+}
+#notifications {
+  width: 2em;
+}
+#search_icon {
+  width: 1.5em;
+}
+
+#sub_profile_icon {
+  width: 3em;
+}
+#sub_username > p {
+  font-weight: bold;
 }
 #front {
   flex: 5;
