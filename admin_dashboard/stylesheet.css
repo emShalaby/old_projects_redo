@@ -31,6 +31,9 @@ html {
   width: 1.5em;
   color: #ffff;
 }
+#navbar > div > p {
+  font-weight: bold;
+}
 #navbar > #title {
   margin-bottom: 2em;
 }
@@ -41,5 +44,21 @@ html {
   margin-top: 3em;
 }
 #dashboard {
+  flex: 5;
+  display: flex;
+  flex-direction: column;
+}
+#header {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+#top_bar{
+  display: flex;
+}
+#top_bar>img{
+  width: 1em;
+}
+#front {
   flex: 5;
 }
