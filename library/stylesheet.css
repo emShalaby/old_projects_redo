@@ -7,7 +7,6 @@ body,
 html {
   width: 100%;
   height: 100%;
-  background-color: burlywood;
 }
 
 #main {
@@ -16,17 +15,34 @@ html {
   align-items: center;
   width: 100%;
   height: 100%;
+  background-color: #1E293B;
+}
+#header{
+  background-color: #FFE4C4;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 1em;
 }
 #library {
-  display: grid;
-  grid-template: 1fr/1fr 1fr 1fr 1fr;
+  display: flex;
+  flex-direction: column;
   gap: 1em;
+  color: #ffff;
+  width: 100%;
 
+}
+#library_header{
+  background-color: #808080;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   padding: 1em;
 }
 .book {
-  background-color: bisque;
-  border: solid 1px gray;
+  display: grid ;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding: 1em;
+  border-bottom: solid 2px gold;
 }
 .off {
   display: none;

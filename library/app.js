@@ -21,16 +21,12 @@ function Book(author, title, pages, status) {
 function addBookToLibrary(book) {
   myLibrary.push(book);
   let bookElement = bookToElement(book);
-  for (prop in bookElement) {
-    libraryElement.append(bookElement[prop]);
-  }
+  libraryElement.append(bookElement);
 }
 function displayLibraryBooks() {
   myLibrary.forEach((book) => {
     let bookElement = bookToElement(book);
-    for (let prop in bookElement) {
-      libraryElement.append(bookElement[prop]);
-    }
+    libraryElement.append(bookElement);
   });
 }
 function bookToElement(bookObj) {
@@ -38,11 +34,14 @@ function bookToElement(bookObj) {
   let authorElement = document.createElement("p.author");
   let pagesElement = document.createElement("P.author");
   let statusElement = document.createElement("p.author");
+  let bookELement = document.createElement("div");
+  bookELement.className = "book";
   titleElement.textContent = bookObj.title;
   authorElement.textContent = bookObj.author;
   pagesElement.textContent = bookObj.pages;
   statusElement.textContent = bookObj.status;
-  return { titleElement, authorElement, pagesElement, statusElement };
+  bookELement.append(titleElement, authorElement, pagesElement, statusElement);
+  return bookELement;
 }
 
 displayLibraryBooks();
@@ -59,8 +58,6 @@ submitBtn.addEventListener("click", (event) => {
     bookStatus.value
   );
   let newBookElement = bookToElement(newBook);
-  for (let prop in newBookElement) {
-    libraryElement.append(newBookElement[prop]);
-  }
+  libraryElement.append(newBookElement);
   modal.className = "off";
 });
