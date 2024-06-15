@@ -18,8 +18,8 @@ html {
   height: 100%;
 }
 #library {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template: 1fr/1fr 1fr 1fr 1fr;
   gap: 1em;
 
   padding: 1em;
