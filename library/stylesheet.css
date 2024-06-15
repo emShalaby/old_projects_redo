@@ -31,7 +31,7 @@ html {
 .off {
   display: none;
 }
-label,
-input {
+input[type="text"],
+input[type="number"] {
   display: block;
 }
