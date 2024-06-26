@@ -28,10 +28,14 @@ function game(
     }
   }
   function add(index) {
-    board[index] = playerToGo.value;
-    checkWinner();
-    turn++;
-    playerToGo = turn % 2 ? player1 : player2;
+    if (!board[index]) {
+      board[index] = playerToGo.value;
+      checkWinner();
+      turn++;
+      playerToGo = turn % 2 ? player1 : player2;
+    }
   }
   return { board, add };
 }
+
+function Display() {}
