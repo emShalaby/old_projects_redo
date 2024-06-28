@@ -3,11 +3,16 @@
   padding: 0;
   box-sizing: border-box;
 }
-html,body{
-    height: 100%;
-    width: 100%;
+html,
+body {
+  height: 100%;
+  width: 100%;
 }
 #board {
   display: grid;
   grid-template: 1fr 1fr 1fr/1fr 1fr 1fr;
+}
+.square {
+  width: 100px;
+  height: 100px;
 }

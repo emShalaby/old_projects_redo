@@ -15,6 +15,18 @@ function game(
   let playerToGo = player1;
   let boardElement = DisplayBoard(board);
   boardElement.initialBoard();
+  //i dont know where to fit this logic
+  let squares = Array.from(document.querySelectorAll(".square"));
+  squares.forEach((square) =>
+    square.addEventListener("click", () => {
+      if (!square.textContent) {
+        square.textContent = playerToGo.value;
+        turn++;
+        playerToGo = turn % 2 ? player1 : player2;
+      }
+    })
+  );
+
   function checkWinner() {
     if (
       (board[0] == board[1] && board[0] == board[2] && board[0] != "") ||
