@@ -21,6 +21,8 @@ function game(
     square.addEventListener("click", () => {
       if (!square.textContent) {
         square.textContent = playerToGo.value;
+        board[squares.indexOf(square)] = playerToGo.value;
+        checkWinner();
         turn++;
         playerToGo = turn % 2 ? player1 : player2;
       }
