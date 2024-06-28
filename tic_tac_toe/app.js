@@ -13,6 +13,8 @@ function game(
   let player1 = createPlayer(name1, value1);
   let player2 = createPlayer(name2, value2);
   let playerToGo = player1;
+  let boardElement = DisplayBoard(board);
+  boardElement.initialBoard();
   function checkWinner() {
     if (
       (board[0] == board[1] && board[0] == board[2] && board[0] != "") ||
@@ -30,12 +32,33 @@ function game(
   function add(index) {
     if (!board[index]) {
       board[index] = playerToGo.value;
+      boardElement.addToBoard(index, playerToGo.value);
       checkWinner();
       turn++;
       playerToGo = turn % 2 ? player1 : player2;
+      DisplayBoard;
     }
   }
   return { board, add };
 }
 
-function Display() {}
+function DisplayBoard(board) {
+  function initialBoard() {
+    const main = document.querySelector("#main");
+    let boardElement = document.createElement("div");
+    let squareElements = [];
+    boardElement.id = "board";
+    for (let i = 0; i < 9; i++) {
+      squareElements[i] = document.createElement("div");
+      squareElements[i].className = "square";
+      squareElements[i].textContent = board[i];
+      boardElement.append(squareElements[i]);
+    }
+    main.append(boardElement);
+  }
+  function addToBoard(index, value) {
+    let squares = document.querySelectorAll(".square");
+    squares[index].textContent = value;
+  }
+  return { addToBoard, initialBoard };
+}
