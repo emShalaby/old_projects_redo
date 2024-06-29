@@ -15,9 +15,14 @@ body {
   height: 300px;
 }
 .square {
-
   border: solid 1px black;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.off {
+  display: none;
+}
+.on {
+  display: block;
 }

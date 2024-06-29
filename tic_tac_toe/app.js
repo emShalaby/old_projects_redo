@@ -1,3 +1,4 @@
+const startBtn = document.querySelector("#start");
 function createPlayer(name, value) {
   return { name, value };
 }
@@ -76,3 +77,8 @@ function DisplayBoard(board) {
   }
   return { addToBoard, initialBoard };
 }
+
+startBtn.addEventListener("click", () => {
+  game();
+  startBtn.className = "off";
+});
