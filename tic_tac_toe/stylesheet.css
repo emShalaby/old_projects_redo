@@ -13,7 +13,12 @@ body {
   justify-content: center;
   align-items: center;
   margin: 1em;
-  
+}
+#main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5em;
 }
 #board {
   display: grid;
