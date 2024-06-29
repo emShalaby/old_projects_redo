@@ -44,7 +44,9 @@ function game(
     ) {
       console.log(playerToGo.name);
       gameState = false;
+      return;
     }
+    if (!board.includes("")) console.log("draw");
   }
 
   return { board };
