@@ -8,6 +8,13 @@ body {
   height: 100%;
   width: 100%;
 }
+#header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1em;
+  
+}
 #board {
   display: grid;
   grid-template: 1fr 1fr 1fr/1fr 1fr 1fr;

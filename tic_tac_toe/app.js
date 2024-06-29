@@ -15,12 +15,13 @@ function game(
   let player2 = createPlayer(name2, value2);
   let playerToGo = player1;
   let boardElement = DisplayBoard(board);
+  let gameState = true;
   boardElement.initialBoard();
   //i dont know where to fit this logic
   let squares = Array.from(document.querySelectorAll(".square"));
   squares.forEach((square) =>
     square.addEventListener("click", () => {
-      if (!square.textContent) {
+      if (!square.textContent && gameState) {
         square.textContent = playerToGo.value;
         board[squares.indexOf(square)] = playerToGo.value;
         checkWinner();
@@ -42,19 +43,11 @@ function game(
       (board[2] == board[5] && board[2] == board[8] && board[2] != "")
     ) {
       console.log(playerToGo.name);
+      gameState = false;
     }
   }
-  function add(index) {
-    if (!board[index]) {
-      board[index] = playerToGo.value;
-      boardElement.addToBoard(index, playerToGo.value);
-      checkWinner();
-      turn++;
-      playerToGo = turn % 2 ? player1 : player2;
-      DisplayBoard;
-    }
-  }
-  return { board, add };
+
+  return { board };
 }
 
 function DisplayBoard(board) {
