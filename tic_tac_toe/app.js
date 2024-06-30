@@ -78,7 +78,7 @@ function gameWipe() {
   if (board) board.remove();
   result.textContent = "";
 }
-function startGame() {
+(function startGame() {
   const startBtn = document.querySelector("#start");
 
   startBtn.addEventListener("click", () => {
@@ -87,5 +87,4 @@ function startGame() {
     gameWipe();
     game((name1 = player1), (name2 = player2));
   });
-}
-startGame();
+})();
