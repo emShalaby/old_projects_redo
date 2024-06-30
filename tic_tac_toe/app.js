@@ -42,12 +42,11 @@ function game(
       (board[1] == board[4] && board[1] == board[7] && board[1] != "") ||
       (board[2] == board[5] && board[2] == board[8] && board[2] != "")
     ) {
-      console.log(playerToGo.name);
       gameState = false;
       result.textContent = playerToGo.name + " Wins!";
       return;
     }
-    if (!board.includes("")) console.log("draw");
+    if (!board.includes("")) result.textContent="Draw!";
   }
 
   return { board };
