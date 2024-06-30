@@ -15,6 +15,7 @@ function game(
   let playerToGo = player1;
   let boardElement = DisplayBoard(board);
   let gameState = true;
+  let result = document.querySelector("#result");
   boardElement.initialBoard();
   //i dont know where to fit this logic
   let squares = Array.from(document.querySelectorAll(".square"));
@@ -43,6 +44,7 @@ function game(
     ) {
       console.log(playerToGo.name);
       gameState = false;
+      result.textContent = playerToGo.name + " Wins!";
       return;
     }
     if (!board.includes("")) console.log("draw");
@@ -73,7 +75,9 @@ function DisplayBoard(board) {
 }
 function gameWipe() {
   let board = document.querySelector("#board");
+  let result = document.querySelector("#result");
   if (board) board.remove();
+  result.textContent = "";
 }
 function startGame() {
   const startBtn = document.querySelector("#start");
