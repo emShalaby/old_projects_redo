@@ -1,4 +1,3 @@
-const startBtn = document.querySelector("#start");
 function createPlayer(name, value) {
   return { name, value };
 }
@@ -72,8 +71,16 @@ function DisplayBoard(board) {
   }
   return { addToBoard, initialBoard };
 }
+function gameWipe() {
+  let board = document.querySelector("#board");
+  if (board) board.remove();
+}
+function startGame() {
+  const startBtn = document.querySelector("#start");
 
-startBtn.addEventListener("click", () => {
-  game();
-  startBtn.className = "off";
-});
+  startBtn.addEventListener("click", () => {
+    gameWipe();
+    game();
+  });
+}
+startGame();
