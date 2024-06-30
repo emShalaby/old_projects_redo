@@ -3,8 +3,8 @@ function createPlayer(name, value) {
 }
 
 function game(
-  name1 = "player1",
-  name2 = "player2",
+  name1 = "Player1",
+  name2 = "Player2",
   value1 = "x",
   value2 = "o"
 ) {
@@ -46,7 +46,7 @@ function game(
       result.textContent = playerToGo.name + " Wins!";
       return;
     }
-    if (!board.includes("")) result.textContent="Draw!";
+    if (!board.includes("")) result.textContent = "Draw!";
   }
 
   return { board };
@@ -82,8 +82,10 @@ function startGame() {
   const startBtn = document.querySelector("#start");
 
   startBtn.addEventListener("click", () => {
+    const player1 = document.querySelector("#player1").value;
+    const player2 = document.querySelector("#player2").value;
     gameWipe();
-    game();
+    game((name1 = player1), (name2 = player2));
   });
 }
 startGame();

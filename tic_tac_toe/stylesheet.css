@@ -23,6 +23,7 @@ body {
   gap: 2em;
   margin: 5em;
 }
+
 #board {
   display: grid;
   grid-template: 1fr 1fr 1fr/1fr 1fr 1fr;
@@ -35,4 +36,7 @@ body {
   justify-content: center;
   align-items: center;
 }
-
+.player{
+  display: flex;
+  gap: 1em;
+}
