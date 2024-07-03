@@ -20,9 +20,12 @@ export default function task(
     store.projects.set(newProject, newProject);
   }
   //update Project
-  let project = store.projects.get(projectId);
-  project.tasks.push(id);
-  store.projects.set(projectId, project);
+  (function updateProject() {
+    let project = store.projects.get(projectId);
+    project.tasks.push(id);
+    store.projects.set(projectId, project);
+  })();
+
   store.tasks.set(id, {
     name,
     description,
