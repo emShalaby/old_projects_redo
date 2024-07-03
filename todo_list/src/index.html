@@ -1,12 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>todolist</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <div id="sidebar">
+      <nav><button id="add-task">Add task</button></nav>
+    </div>
+    <div id="content">
+      <div id="new-task-modal">
+        <input type="text" value="Task name" />
+        <input type="text" value="Description" />
+        <input type="datetime-local" />
+        <label for="priority">Priority</label>
+        <select name="priority" id="priority">
+            
+          <option value="1">Priority 1</option>
+          <option value="2">Priority 2</option>
+          <option value="3">Priority 3</option>
+          <option value="4">Priority 4</option>
+        </select>
+        <label for="project">project</label>
+        <select name="project" id="project">
+            <option value="inbox">inbox</option>
+        </select>
+      </div>
+    </div>
+  </body>
 </html>
