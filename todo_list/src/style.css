@@ -17,4 +17,6 @@ body {
 #content {
   flex: 5;
 }
-
+.off {
+  display: none;
+}

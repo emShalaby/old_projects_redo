@@ -4,6 +4,7 @@ export default function addTask() {
   const addTaskBtn = document.querySelector("#add-task");
   const projectSelection = document.querySelector("#project-selection");
   const submitBtn = document.querySelector("#task-submit");
+  const newTaskModal = document.querySelector("#new-task-modal");
   let currentProjects = store.projects;
 
   function populateProjects() {
@@ -35,6 +36,10 @@ export default function addTask() {
   }
   addTaskBtn.addEventListener("click", () => {
     populateProjects();
+    newTaskModal.className = "on";
   });
-  submitBtn.addEventListener("click", createTask);
+  submitBtn.addEventListener("click", () => {
+    newTaskModal.className = "off";
+    createTask();
+  });
 }
