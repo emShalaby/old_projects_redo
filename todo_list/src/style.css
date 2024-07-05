@@ -16,7 +16,14 @@ body {
 }
 #content {
   flex: 5;
+  height: 100%;
+  background-color: antiquewhite;
+  border: solid 1px black;
 }
 .off {
   display: none;
+}
+nav {
+  background-color: bisque;
+  height: 100%;
 }
