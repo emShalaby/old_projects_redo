@@ -8,13 +8,20 @@
   </head>
   <body>
     <div id="sidebar">
-      <nav><button id="add-task">Add task</button></nav>
+      <nav>
+        <button id="add-task">Add task</button><br /><br /><button
+          id="add-project"
+        >
+          New Project
+        </button>
+      </nav>
     </div>
     <div id="content">
       <div id="new-task-modal" class="off">
-        <input type="text" value="Task name" id="new-task-name"/ class="new-task-input">
-        <input type="text" value="Description" class="new-task-input"/>
-        <input type="datetime-local" value="" class="new-task-input"/>
+        <input type="text" value="Task name" id="new-task-name"/
+        class="new-task-input">
+        <input type="text" value="Description" class="new-task-input" />
+        <input type="datetime-local" value="" class="new-task-input" />
         <label for="priority">Priority</label>
         <select name="priority" id="priority" class="new-task-input">
           <option value="1">Priority 1</option>
@@ -23,8 +30,17 @@
           <option value="4">Priority 4</option>
         </select>
         <label for="project">project</label>
-        <select name="project" id="project-selection" class="new-task-input"></select>
+        <select
+          name="project"
+          id="project-selection"
+          class="new-task-input"
+        ></select>
         <button type="submit" id="task-submit">Submit</button>
+      </div>
+      <div id="new-project-modal" class="off">
+        <label for="new-project-name">Name:</label>
+        <input type="text" id="new-project-name" value="" />
+        <button type="submit" id="project-submit">Submit</button>
       </div>
     </div>
   </body>
