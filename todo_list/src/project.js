@@ -1,5 +1,5 @@
 import store from "./store";
-export default function project(name, tasks = []) {
+export default function createProject(name, tasks = []) {
   const id = Date.now();
   function addTask(taskId) {
     tasks.push(taskId);

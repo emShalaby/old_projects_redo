@@ -1,7 +1,6 @@
 import store from "./store";
 import inbox from "./inbox";
-import project from "./project";
-export default function task(
+export default function createTask(
   name,
   description = "",
   dueDate = "",

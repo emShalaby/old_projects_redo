@@ -1,3 +1,3 @@
-import project from "./project";
-let inbox = project("inbox");
+import createProject from "./project";
+let inbox = createProject("inbox");
 export default inbox;

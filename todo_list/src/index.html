@@ -19,12 +19,16 @@
     <div id="content">
       <div id="current-project"></div>
       <div id="new-task-modal" class="off">
-        <input type="text" value="Task name" id="new-task-name"/
-        class="new-task-input">
-        <input type="text" value="Description" class="new-task-input" />
-        <input type="datetime-local" value="" class="new-task-input" />
+        <input
+          type="text"
+          value="Task name"
+          id="new-task-name"
+          class="new-task-input"
+        />
+        <input type="text" value="Description" class="new-task-input" id="new-task-description"/>
+        <input type="datetime-local" value="" class="new-task-input" id="new-task-date"/>
         <label for="priority">Priority</label>
-        <select name="priority" id="priority" class="new-task-input">
+        <select name="priority" id="new-task-priority" class="new-task-input">
           <option value="1">Priority 1</option>
           <option value="2">Priority 2</option>
           <option value="3">Priority 3</option>
@@ -36,7 +40,7 @@
           id="project-selection"
           class="new-task-input"
         ></select>
-        <button type="submit" id="task-submit">Submit</button>
+        <button type="submit" id="new-task-submit">Submit</button>
       </div>
       <div id="new-project-modal" class="off">
         <label for="new-project-name">Name:</label>
