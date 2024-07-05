@@ -34,7 +34,6 @@ export default function addTask() {
     );
   }
   addTaskBtn.addEventListener("click", () => {
-    console.log("click");
     populateProjects();
   });
   submitBtn.addEventListener("click", createTask);

@@ -3,7 +3,7 @@ import project from "./project.js";
 import store from "./store";
 import inbox from "./inbox.js";
 import "./style.css";
-import addTask from "./DOM_manipulation01.js";
+import addTask from "./DOM_add_task";
 window.task = task;
 window.project = project;
 window.store = store;
