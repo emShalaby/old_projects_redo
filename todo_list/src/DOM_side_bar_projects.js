@@ -11,6 +11,5 @@ export default function createSideBarProjects() {
     project.append(p);
     listOfElements.push(project);
   }
-  console.log(listOfElements);
   return listOfElements;
 }

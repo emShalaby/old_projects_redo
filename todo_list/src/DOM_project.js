@@ -3,7 +3,6 @@ import inbox from "./inbox";
 export default function populateContent(project = inbox) {
   const currentProject = document.querySelector("#current-project");
   currentProject.textContent = "";
-  const projects = store.projects;
   const h2 = document.createElement("h2");
   const tasksElement = document.createElement("div");
   for (let i = 0; i < project.tasks.length; i++) {

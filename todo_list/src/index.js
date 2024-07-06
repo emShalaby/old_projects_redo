@@ -8,7 +8,7 @@ import initNewTaskController from "./newTaskController.js";
 import initNewProjectController from "./newProjectController.js";
 import initNewTaskSubmissionController from "./newTaskSubmissionController.js";
 import initNewProjectSubmissionController from "./newProjectSubmissionController.js";
-import initSideBarProjectsController from "./sideBarProjectsController.js";
+import { initSideBarProjectsController } from "./sideBarProjectsController.js";
 window.task = createTask;
 window.project = createProject;
 window.store = store;
@@ -19,4 +19,3 @@ initNewProjectController();
 initNewProjectSubmissionController();
 populateContent();
 initSideBarProjectsController();
-
