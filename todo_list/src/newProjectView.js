@@ -1,3 +1,4 @@
-export default function getNewProjectInputs() {
-  const name = document.querySelector("#new-project-name");
+export default function getNewProjectInputFields() {
+  let name = document.querySelector("#new-project-name").value;
+  return { name };
 }

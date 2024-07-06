@@ -13,6 +13,14 @@ body {
 }
 #sidebar {
   flex: 1;
+  height: 100%;
+  
+}
+#projects-header{
+  margin-top: 3em;
+}
+#projects{
+  margin-top: 1em;
 }
 #content {
   flex: 5;
@@ -23,7 +31,4 @@ body {
 .off {
   display: none;
 }
-nav {
-  background-color: bisque;
-  height: 100%;
-}
+

@@ -1,5 +1,5 @@
-import getNewProjectInputFields from "./newProjectView";
-import createProject from "./project";
+import getNewProjectInputFields from "./newProjectView.js";
+import createProject from "./project.js";
 export default function initNewProjectSubmissionController() {
   const submitBtn = document.querySelector("#new-project-submit");
   submitBtn.addEventListener("click", () => {
