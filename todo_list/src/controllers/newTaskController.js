@@ -1,4 +1,4 @@
-import DOMnewTask from "./DOM_new_task";
+import DOMnewTask from "../DOM/DOM_new_task";
 
 export default function initNewTaskController() {
   const newTaskBtn = document.querySelector("#add-task");

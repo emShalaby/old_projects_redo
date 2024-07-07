@@ -1,6 +1,6 @@
-import createSideBarProjects from "./DOM_side_bar_projects.js";
-import getStoredProjectByName from "./getProjectByName.js";
-import populateContent from "./DOM_project.js";
+import createSideBarProjects from "../DOM/DOM_side_bar_projects.js";
+import getStoredProjectByName from "../getProjectByName.js";
+import populateContent from "../DOM/DOM_project.js";
 export function initSideBarProjectsController() {
   const submitNewProjectBtn = document.querySelector("#new-project-submit");
 

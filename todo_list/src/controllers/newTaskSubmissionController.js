@@ -1,5 +1,5 @@
-import getNewTaskInputs from "./newTaskView";
-import createTask from "./todo";
+import getNewTaskInputs from "../views/newTaskView";
+import createTask from "../todo";
 export default function initNewTaskSubmissionController() {
   const submitBtn = document.querySelector("#new-task-submit");
   console.log(submitBtn);
