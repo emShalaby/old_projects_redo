@@ -4,6 +4,7 @@ export default function populateContent(project = inbox) {
   const currentProject = document.querySelector("#current-project");
   currentProject.textContent = "";
   const h2 = document.createElement("h2");
+  h2.id='content-project-name'
   const tasksElement = document.createElement("div");
   for (let i = 0; i < project.tasks.length; i++) {
     let task = document.createElement("div");
