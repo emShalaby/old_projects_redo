@@ -1,3 +1,4 @@
+import store from "../store"
 export default function DOMnewTask() {
   const projectSelection = document.querySelector("#project-selection");
   const newTaskModal = document.querySelector("#new-task-modal");
