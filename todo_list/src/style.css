@@ -41,14 +41,7 @@ body {
 #new-project-modal-header{
   margin-bottom: auto;
 }
-#new-project-modal>label,#new-project-modal>input {
-  font-weight: bolder;
-  align-self: flex-start;
-  justify-self: flex-start;
-}
-#new-project-modal>input{
-  width: 100%;
-}
+
 .off,
 #new-project-modal.off {
   display: none;
