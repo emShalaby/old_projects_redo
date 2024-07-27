@@ -10,14 +10,8 @@ body {
 #sidebar {
   flex: 1;
   height: 100%;
+}
 
-}
-#projects-header {
-  margin-top: 3em;
-}
-#projects {
-  margin-top: 1em;
-}
 #content {
   flex: 5;
   height: 100%;
