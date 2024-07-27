@@ -36,10 +36,7 @@ body {
   margin-bottom: auto;
 }
 
-.off,
-#new-project-modal.off {
-  display: none;
-}
+
 #new-project-control{
   display: flex;
   gap: 1em;

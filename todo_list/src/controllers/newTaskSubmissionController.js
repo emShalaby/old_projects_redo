@@ -4,8 +4,6 @@ import getCurrentDOMProject from "../views/projectView";
 import populateContent from "../DOM/DOM_project";
 export default function initNewTaskSubmissionController() {
   const submitBtn = document.querySelector("#new-task-submit");
-  console.log(submitBtn);
-  const newTaskModal = document.querySelector("#new-task-modal");
   submitBtn.addEventListener("click", () => {
     const inputs = getNewTaskInputs();
     const inputValues = [];
@@ -19,7 +17,6 @@ export default function initNewTaskSubmissionController() {
       inputValues[3],
       inputValues[4]
     );
-    newTaskModal.className = "off";
     const currentProject = getCurrentDOMProject();
     populateContent(currentProject);
   });

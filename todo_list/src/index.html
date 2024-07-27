@@ -20,64 +20,102 @@
   <body>
     <div id="sidebar" class="container">
       <nav>
-        <button id="add-task" class="btn btn-primary">Add task</button><br /><br /><button
-          id="add-project"
+        <button
+          id="add-task"
+          class="btn btn-primary"
+          data-bs-toggle="modal"
+          data-bs-target="#new-task-modal"
         >
-          New Project
-        </button>
+          Add task</button
+        ><br /><br /><button id="add-project">New Project</button>
       </nav>
       <p id="projects-header" class="mt-5">My projects</p>
       <div id="projects"></div>
     </div>
     <div id="content" class="container-fluid">
       <div id="current-project"></div>
-      <div id="new-task-modal" class="off">
-        <div class="form-floating mb-1">
-          <input
-            type="text"
-            placeholder="Task name"
-            id="new-task-name"
-            class="new-task-input form-control"
-          />
-          <label for="new-task-name" class="form-label">Task name</label>
+      <div class="modal fade" id="new-task-modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <form action="">
+              <div class="form-floating mb-1">
+                <input
+                  type="text"
+                  placeholder="Task name"
+                  id="new-task-name"
+                  class="new-task-input form-control"
+                  value=""
+                />
+                <label for="new-task-name" class="form-label">Task name</label>
+              </div>
+              <div class="form-floating mb-1">
+                <input
+                  type="text"
+                  placeholder="Description"
+                  class="new-task-input form-control"
+                  id="new-task-description"
+                  value=""
+                />
+                <label for="new-task-description" class="form-label"
+                  >Description</label
+                >
+              </div>
+              <input
+                type="datetime-local"
+                placeholder=""
+                class="new-task-input"
+                id="new-task-date"
+                value=""
+              />
+              <label for="priority" class="form-label">Priority</label>
+              <select
+                name="priority"
+                id="new-task-priority"
+                class="new-task-input form-select-sm mb-1"
+              >
+                <option value="1">Priority 1</option>
+                <option value="2">Priority 2</option>
+                <option value="3">Priority 3</option>
+                <option value="4">Priority 4</option>
+              </select>
+              <label for="project" class="form-label">project</label>
+              <select
+                name="project"
+                id="project-selection"
+                class="new-task-input form-select-sm mb-1"
+              ></select>
+              <button
+                type="button"
+                id="new-task-submit"
+                class="btn btn-outline-success"
+                data-bs-dismiss="modal"
+                data-bs-target="#new-task-modal"
+              >
+                Submit 
+              </button>
+            </form>
+          </div>
         </div>
-        <div class="form-floating mb-1">
-          <input
-            type="text"
-            placeholder="Description"
-            class="new-task-input form-control"
-            id="new-task-description"
-          />
-          <label for="new-task-description" class="form-label">Description</label>
-        </div>
-        <input
-          type="datetime-local"
-          placeholder=""
-          class="new-task-input"
-          id="new-task-date"
-        />
-        <label for="priority" class="form-label">Priority</label>
-        <select name="priority" id="new-task-priority" class="new-task-input form-select-sm mb-1">
-          <option value="1">Priority 1</option>
-          <option value="2">Priority 2</option>
-          <option value="3">Priority 3</option>
-          <option value="4">Priority 4</option>
-        </select>
-        <label for="project" class="form-label">project</label>
-        <select
-          name="project"
-          id="project-selection"
-          class="new-task-input form-select-sm mb-1"
-        ></select>
-        <button type="button" id="new-task-submit">Submit</button>
       </div>
       <form id="new-project-modal" class="off">
         <h3 id="new-project-modal-header">Add project</h3>
         <label for="new-project-name" class="form-label">Project Title:</label>
         <input type="text" id="new-project-name" class="form-control" />
         <div id="new-project-control">
-          <button type="button" class="btn btn-outline-success"id="new-project-submit">Submit</button>
-          <button type="button" class="btn btn-secondary"id="new-project-cancel">Cancel</button>
+          <button
+            type="button"
+            class="btn btn-outline-success"
+            id="new-project-submit"
+          >
+            Submit
+          </button>
+          <button
+            type="button"
+            class="btn btn-secondary"
+            id="new-project-cancel"
+          >
+            Cancel
+          </button>
         </div>
       </form>
     </div>

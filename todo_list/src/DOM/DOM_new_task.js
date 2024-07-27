@@ -1,8 +1,7 @@
 import store from "../store"
 export default function DOMnewTask() {
   const projectSelection = document.querySelector("#project-selection");
-  const newTaskModal = document.querySelector("#new-task-modal");
-  newTaskModal.className = "on";
+
   const projects = store.projects;
   projectSelection.textContent = "";
   for (const [property, propValue] of projects) {
