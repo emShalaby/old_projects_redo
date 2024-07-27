@@ -18,7 +18,7 @@
     ></script>
   </head>
   <body>
-    <div id="sidebar">
+    <div id="sidebar" class="container">
       <nav>
         <button id="add-task">Add task</button><br /><br /><button
           id="add-project"
@@ -29,7 +29,7 @@
       <p id="projects-header">My projects</p>
       <div id="projects"></div>
     </div>
-    <div id="content">
+    <div id="content" class="container-fluid">
       <div id="current-project"></div>
       <div id="new-task-modal" class="off">
         <input
@@ -65,15 +65,15 @@
         ></select>
         <button type="submit" id="new-task-submit">Submit</button>
       </div>
-      <div id="new-project-modal" class="off">
+      <form id="new-project-modal" class="off">
         <h3 id="new-project-modal-header">Add project</h3>
         <label for="new-project-name">Project Title:</label>
         <input type="text" id="new-project-name" value="" />
         <div id="new-project-control">
-          <button type="submit" id="new-project-submit">Submit</button>
-          <button type="submit" id="new-project-cancel">Cancel</button>
+          <button type="button" class="btn btn-outline-success"id="new-project-submit">Submit</button>
+          <button type="button" class="btn btn-secondary"id="new-project-cancel">Cancel</button>
         </div>
-      </div>
+      </form>
     </div>
   </body>
 </html>
