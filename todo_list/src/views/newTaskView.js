@@ -1,4 +1,4 @@
-import store from "../store";
+import { store } from "../store";
 export default function getNewTaskInputs() {
   const name = document.querySelector("#new-task-name").value;
   const description = document.querySelector("#new-task-description").value;

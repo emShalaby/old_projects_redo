@@ -5,18 +5,13 @@ import populateContent from "../DOM/DOM_project";
 export default function initNewTaskSubmissionController() {
   const submitBtn = document.querySelector("#new-task-submit");
   submitBtn.addEventListener("click", () => {
-    const inputs = getNewTaskInputs();
-    const inputValues = [];
-    for (const property in inputs) {
-      inputValues.push(inputs[property]);
-    }
-    createTask(
-      inputValues[0],
-      inputValues[1],
-      inputValues[2],
-      inputValues[3],
-      inputValues[4]
-    );
+    console.log(getNewTaskInputs());
+    const name = getNewTaskInputs().name;
+    const description = getNewTaskInputs().description;
+    const date = getNewTaskInputs().date;
+    const priority = getNewTaskInputs().priority;
+    const projectId = getNewTaskInputs().projectId;
+    createTask(name, description, date, priority, projectId);
     const currentProject = getCurrentDOMProject();
     populateContent(currentProject);
   });

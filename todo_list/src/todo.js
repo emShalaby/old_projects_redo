@@ -1,4 +1,4 @@
-import store from "./store";
+import { store, updateLocalStorage } from "./store";
 import inbox from "./inbox";
 export default function createTask(
   name,
@@ -30,8 +30,9 @@ export default function createTask(
     description,
     dueDate,
     priority,
-    project,
+    projectId,
     setProject,
   });
+  updateLocalStorage();
   return { name, description, dueDate, priority, projectId, setProject };
 }

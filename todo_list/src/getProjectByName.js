@@ -1,4 +1,4 @@
-import store from "./store.js";
+import { store } from "./store.js";
 export default function getStoredProjectByName(name) {
   const projects = store.projects;
   let result = {};

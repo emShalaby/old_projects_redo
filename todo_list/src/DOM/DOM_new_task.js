@@ -1,4 +1,4 @@
-import store from "../store"
+import { store, updateLocalStorage } from "../store";
 export default function DOMnewTask() {
   const projectSelection = document.querySelector("#project-selection");
 

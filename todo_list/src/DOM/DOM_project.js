@@ -1,4 +1,4 @@
-import store from "../store";
+import {store} from "../store";
 import inbox from "../inbox";
 export default function populateContent(project = inbox) {
   const currentProject = document.querySelector("#current-project");

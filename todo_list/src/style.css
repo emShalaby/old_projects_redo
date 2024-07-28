@@ -25,3 +25,6 @@ html {
   color: #fedfe1;
   border-bottom: 2px solid #dffefc;
 }
+.row{
+  flex-wrap: ;
+}

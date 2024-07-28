@@ -1,11 +1,11 @@
-
-function localStorageManager() {
-  const projects = new Map();
-  const tasks = new Map();
-  return { tasks, projects };
-}
-const store = {
-  projects: new Map(),
-  tasks: new Map(),
+const initProjects = JSON.parse(localStorage.getItem("projects") || "[]");
+const initTasks = JSON.parse(localStorage.getItem("tasks") || "[]");
+export const store = {
+  projects: new Map(initProjects),
+  tasks: new Map(initTasks),
 };
-export default store;
+export function updateLocalStorage() {
+  localStorage.setItem("projects", JSON.stringify([...store.projects]));
+  localStorage.setItem("tasks", JSON.stringify([...store.tasks]));
+}
+updateLocalStorage();
