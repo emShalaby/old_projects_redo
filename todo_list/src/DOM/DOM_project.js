@@ -3,7 +3,9 @@ import inbox from "../inbox";
 export default function populateContent(project = inbox) {
   const currentProject = document.querySelector("#current-project");
   currentProject.textContent = "";
+  const header = document.createElement("div");
   const h2 = document.createElement("h2");
+  
   h2.id = "content-project-name";
   const tasksElement = document.createElement("div");
   const col = document.createElement("div");
@@ -53,6 +55,9 @@ export default function populateContent(project = inbox) {
   tasksElement.append(col);
   tasksElement.id = "current-tasks";
   h2.textContent = project.name;
-  currentProject.append(h2);
+  header.append(h2);
+  header.classList.add("header");
+  header.classList.add("text-center");
+  currentProject.append(header);
   currentProject.append(tasksElement);
 }
