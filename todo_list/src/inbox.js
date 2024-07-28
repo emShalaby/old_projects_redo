@@ -1,3 +1,3 @@
 import createProject from "./project";
-let inbox = createProject("inbox");
+let inbox = createProject("Inbox");
 export default inbox;

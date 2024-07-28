@@ -43,9 +43,12 @@
       <div id="current-project"></div>
       <div class="modal fade" id="new-task-modal">
         <div class="modal-dialog">
-          <div class="modal-content">
+          <div class="modal-content p-4">
+            <div class="modal-header">
+              <h2>Add Task</h2>
+            </div>
             <form action="">
-              <div class="form-floating mb-1">
+              <div class="form-floating mb-2">
                 <input
                   type="text"
                   placeholder="Task name"
@@ -55,7 +58,7 @@
                 />
                 <label for="new-task-name" class="form-label">Task name</label>
               </div>
-              <div class="form-floating mb-1">
+              <div class="form-floating mb-2">
                 <input
                   type="text"
                   placeholder="Description"
@@ -70,26 +73,27 @@
               <input
                 type="datetime-local"
                 placeholder=""
-                class="new-task-input"
+                class="new-task-input mb-2 form-control"
                 id="new-task-date"
                 value=""
               />
-              <label for="priority" class="form-label">Priority</label>
+              <label for="new-taskpriority" class="form-label">Priority</label>
               <select
                 name="priority"
                 id="new-task-priority"
-                class="new-task-input form-select-sm mb-1"
+                class="new-task-input form-select mb-2"
               >
                 <option value="1">Priority 1</option>
                 <option value="2">Priority 2</option>
                 <option value="3">Priority 3</option>
                 <option value="4">Priority 4</option>
               </select>
-              <label for="project" class="form-label">project</label>
+              <label for="project-selection" class="form-label">Project</label>
+
               <select
                 name="project"
                 id="project-selection"
-                class="new-task-input form-select-sm mb-1"
+                class="new-task-input form-select mb-5"
               ></select>
               <button
                 type="button"
@@ -100,19 +104,31 @@
               >
                 Submit
               </button>
+              <button
+                type="button"
+                data-bs-dismiss="modal"
+                data-bs-target="#new-task-modal"
+                class="btn btn-outline-secondary ms-2"
+                >
+                Cancel
+              </button>
             </form>
           </div>
         </div>
       </div>
-      <div class="modal" id="new-project-modal">
+      <div class="modal fade" id="new-project-modal">
         <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">Add project</div>
+          <div class="modal-content p-3">
+            <div class="modal-header"><h2>Add project</h2></div>
             <form>
               <label for="new-project-name" class="form-label"
                 >Project Title:</label
               >
-              <input type="text" id="new-project-name" class="form-control" />
+              <input
+                type="text"
+                id="new-project-name"
+                class="form-control mb-5"
+              />
               <div id="new-project-control">
                 <button
                   type="button"
@@ -128,6 +144,8 @@
                   type="button"
                   class="btn btn-secondary"
                   id="new-project-cancel"
+                  data-bs-dismiss="modal"
+                  data-bs-target="#new-project-modal"
                 >
                   Cancel
                 </button>
