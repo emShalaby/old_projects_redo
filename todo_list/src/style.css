@@ -4,19 +4,13 @@ html {
   height: 100%;
   width: 100%;
 }
-body {
-  display: flex;
-}
+
 #sidebar {
   flex: 1;
-  height: 100%;
 }
-#sidebar>*{
-  margin: 1em;
-}
+
 #content {
   flex: 5;
-  height: 100%;
   background-color: antiquewhite;
   border: solid 1px black;
 }
