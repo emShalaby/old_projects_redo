@@ -27,7 +27,14 @@
           data-bs-target="#new-task-modal"
         >
           Add task</button
-        ><br /><br /><button id="add-project">New Project</button>
+        ><br /><br /><button
+          id="add-project"
+          class="btn btn-primary"
+          data-bs-toggle="modal"
+          data-bs-target="#new-project-modal"
+        >
+          New Project
+        </button>
       </nav>
       <p id="projects-header" class="mt-5">My projects</p>
       <div id="projects"></div>
@@ -91,33 +98,44 @@
                 data-bs-dismiss="modal"
                 data-bs-target="#new-task-modal"
               >
-                Submit 
+                Submit
               </button>
             </form>
           </div>
         </div>
       </div>
-      <form id="new-project-modal" class="off">
-        <h3 id="new-project-modal-header">Add project</h3>
-        <label for="new-project-name" class="form-label">Project Title:</label>
-        <input type="text" id="new-project-name" class="form-control" />
-        <div id="new-project-control">
-          <button
-            type="button"
-            class="btn btn-outline-success"
-            id="new-project-submit"
-          >
-            Submit
-          </button>
-          <button
-            type="button"
-            class="btn btn-secondary"
-            id="new-project-cancel"
-          >
-            Cancel
-          </button>
+      <div class="modal" id="new-project-modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">Add project</div>
+            <form>
+              <label for="new-project-name" class="form-label"
+                >Project Title:</label
+              >
+              <input type="text" id="new-project-name" class="form-control" />
+              <div id="new-project-control">
+                <button
+                  type="button"
+                  class="btn btn-outline-success"
+                  id="new-project-submit"
+                  class="btn btn-outline-success"
+                  data-bs-dismiss="modal"
+                  data-bs-target="#new-project-modal"
+                >
+                  Submit
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  id="new-project-cancel"
+                >
+                  Cancel
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
-      </form>
+      </div>
     </div>
   </body>
 </html>
