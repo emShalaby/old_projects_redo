@@ -12,7 +12,7 @@ export default function populateContent(project = inbox) {
   tasksElement.classList.add("row");
   tasksElement.classList.add("justify-content-center");
   col.classList.add("col");
-  col.classList.add("col-8");
+  col.classList.add("col-6");
 
   for (let i = 0; i < project.tasks.length; i++) {
     const task = document.createElement("div");

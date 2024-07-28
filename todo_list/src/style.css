@@ -6,10 +6,22 @@ html {
 
 #sidebar {
   flex: 1;
+  background-color: #fedfe1;
+  color: #8b2c33;
 }
 
 #content {
   flex: 5;
-  background-color: antiquewhite;
+
   border: solid 1px black;
+  color: #fedfe1;
+  background-color: #1e1e1e;
+}
+.modal {
+  color: #8b2c33;
+}
+.card {
+  background-color: #1e1e1e;
+  color: #fedfe1;
+  border-bottom: 2px solid #dffefc;
 }
