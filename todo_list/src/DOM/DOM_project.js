@@ -48,7 +48,7 @@ export default function populateContent(project = inbox) {
 
     btnGroup.append(editTaskBtn);
     btnGroup.append(deleteTaskBtn);
-    btnGroup.classList.add("p-3");
+    btnGroup.classList.add("mt-3")
     taskBody.append(btnGroup);
     col.append(task);
   }

@@ -1,18 +1,14 @@
-body,
-html {
-  height: 100%;
-  width: 100%;
+:root {
+  --bs-primary: #1e1e1e;
+  --bs-primary-rgb: 30, 30, 30;
 }
-
 #sidebar {
-  flex: 1;
   background-color: #fedfe1;
   color: #8b2c33;
+  height: 100vh;
 }
 
 #content {
-  flex: 5;
-
   border: solid 1px black;
   color: #fedfe1;
   background-color: #1e1e1e;
@@ -25,6 +21,6 @@ html {
   color: #fedfe1;
   border-bottom: 2px solid #dffefc;
 }
-.row{
-  flex-wrap: ;
+.col {
+  overflow: auto;
 }

@@ -9,3 +9,4 @@ export function updateLocalStorage() {
   localStorage.setItem("tasks", JSON.stringify([...store.tasks]));
 }
 updateLocalStorage();
+
