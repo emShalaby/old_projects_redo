@@ -1,3 +1,3 @@
-export default function deleteTask(tasksElement) {
+export default function deleteTaskDOM(tasksElement) {
   tasksElement.remove();
 }

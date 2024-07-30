@@ -1,6 +1,7 @@
 import { store } from "../store";
 import inbox from "../inbox";
-import deleteTask from "./DOM_delete_task";
+import deleteTaskDOM from "./DOM_delete_task";
+import deleteTaskStore from "../controllers/deleteTaskController";
 export default function populateContent(project = inbox) {
   const currentProject = document.querySelector("#current-project");
   currentProject.textContent = "";
@@ -38,7 +39,10 @@ export default function populateContent(project = inbox) {
     deleteTaskBtn.classList.add("btn-sm");
     deleteTaskBtn.classList.add("ms-2");
     deleteTaskBtn.textContent = "Delete";
-    deleteTaskBtn.addEventListener("click", (event) => deleteTask(task));
+    deleteTaskBtn.addEventListener("click", (event) => deleteTaskDOM(task));
+    deleteTaskBtn.addEventListener("click", (event) => {
+      deleteTaskStore(task.dataset.id);
+    });
     name.textContent = taskObj.name;
     name.classList.add("card-title");
     description.textContent = taskObj.description;

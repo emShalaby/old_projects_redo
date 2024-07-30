@@ -5,7 +5,6 @@ import populateContent from "../DOM/DOM_project";
 export default function initNewTaskSubmissionController() {
   const submitBtn = document.querySelector("#new-task-submit");
   submitBtn.addEventListener("click", () => {
-    console.log(getNewTaskInputs());
     const name = getNewTaskInputs().name;
     const description = getNewTaskInputs().description;
     const date = getNewTaskInputs().date;
