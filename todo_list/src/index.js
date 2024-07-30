@@ -1,5 +1,5 @@
 import "bootstrap";
-import "./main.scss";
+import "./scss/main.scss";
 import { store } from "./store";
 import inbox from "./inbox.js";
 import populateContent from "./DOM/DOM_project.js";
