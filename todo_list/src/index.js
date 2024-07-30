@@ -2,7 +2,6 @@ import "bootstrap";
 import "./main.scss";
 import { store } from "./store";
 import inbox from "./inbox.js";
-import "./style.css";
 import populateContent from "./DOM/DOM_project.js";
 import initNewTaskController from "./controllers/newTaskController.js";
 import initNewTaskSubmissionController from "./controllers/newTaskSubmissionController.js";
