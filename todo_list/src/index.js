@@ -1,5 +1,5 @@
-import createTask from "./todo.js";
-import createProject from "./project.js";
+import "bootstrap";
+import "./main.scss";
 import { store } from "./store";
 import inbox from "./inbox.js";
 import "./style.css";
