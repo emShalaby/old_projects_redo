@@ -32,6 +32,7 @@ export default function createTask(
     priority,
     projectId,
     setProject,
+    id,
   });
   updateLocalStorage();
   return { name, description, dueDate, priority, projectId, setProject };

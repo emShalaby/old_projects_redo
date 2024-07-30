@@ -1,11 +1,12 @@
-import {store} from "../store";
+import { store } from "../store";
 import inbox from "../inbox";
+import deleteTask from "./DOM_delete_task";
 export default function populateContent(project = inbox) {
   const currentProject = document.querySelector("#current-project");
   currentProject.textContent = "";
   const header = document.createElement("div");
   const h2 = document.createElement("h2");
-  
+
   h2.id = "content-project-name";
   const tasksElement = document.createElement("div");
   const col = document.createElement("div");
@@ -24,7 +25,8 @@ export default function populateContent(project = inbox) {
     const btnGroup = document.createElement("div");
     const editTaskBtn = document.createElement("button");
     const deleteTaskBtn = document.createElement("button");
-
+    // the project object only has the task id in its tasks key
+    task.dataset.id = project.tasks[i];
     task.classList.add("card");
     taskBody.classList.add("card-body");
     editTaskBtn.textContent = "Edit Task";
@@ -36,6 +38,7 @@ export default function populateContent(project = inbox) {
     deleteTaskBtn.classList.add("btn-sm");
     deleteTaskBtn.classList.add("ms-2");
     deleteTaskBtn.textContent = "Delete";
+    deleteTaskBtn.addEventListener("click", (event) => deleteTask(event));
     name.textContent = taskObj.name;
     name.classList.add("card-title");
     description.textContent = taskObj.description;
@@ -48,7 +51,7 @@ export default function populateContent(project = inbox) {
 
     btnGroup.append(editTaskBtn);
     btnGroup.append(deleteTaskBtn);
-    btnGroup.classList.add("mt-3")
+    btnGroup.classList.add("mt-3");
     taskBody.append(btnGroup);
     col.append(task);
   }
